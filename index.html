@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Myworld</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+    integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <link rel="stylesheet" type="text/css" href="customSwal.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+    integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+
+  <!-- Font -->
+  <link rel="stylesheet" href="fonts/style.css">
+
+  <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.webp">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="theme-color" content="#ffffff">
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollTrigger.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Grape+Nuts&display=swap" rel="stylesheet">
+
+
+
+  <script>
+    (function (w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({
+        'gtm.start': new Date().getTime(),
+        event: 'gtm.js'
+      });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src =
+        'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-NLNQXC9');
+  </script>
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-58RKJ842J5');
+  </script>
+</head>
+
+<body>
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NLNQXC9" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+
+  <div id="cookie-banner" class="cookie-banner">
+    <p>เว็บไซต์นี้ใช้คุกกี้เพื่อปรับปรุงประสบการณ์ของคุณบนเว็บไซต์ของเรา <a href="privacy-policy.html">อ่านเพิ่มเติม</a>
+    </p>
+    <button id="accept-cookies" class="cookie-button">ยอมรับ</button>
+  </div>
+  <img src="images/Logo.webp" id="logo-img" alt="">
+  <!-- <div id="popup" class="popup">
+    <div class="popup-content">
+      <span class="close"><img
+          src="imagesnew/Close.webp"
+          alt="Close"></span>
+      <img
+        src="imagesnew/product.webp"
+        id="product" alt="Popup Image">
+      <div id="shopNow">
+        <img id="shopNow-img"
+          src="imagesnew/buy-btn.webp"
+          alt="Buy Button">
+      </div>
+      <div id="soldOut" class="hidden">Sold Out</div>
+    </div>
+  </div> -->
+  <div class="nav">
+    <input type="checkbox" id="active">
+    <label for="active" class="menu-btn"><i class="fas fa-bars"></i></label>
+    <a href="https://shop.line.me/@myworld">
+      <img src="imagesnew/shopping-cart.webp" id="cart" alt="">
+    </a>
+    <div class="wrapper">
+      <ul>
+        <li class="nav-item">
+          <a class="nav-link" href="https://myworld-virtual-store.com">Virtual</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="#myworld">สมัครสมาชิก</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#rules">COINS สะสม</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#Items">MY LIMITED ITEMS</a>
+        </li>
+        <li class="social-wrap-header">stay connected with us on</li>
+
+        <li class="socials">
+          <a href="https://www.facebook.com/myworldstore.th" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="24" height="24">
+              <path
+                d="M20.19,1.81A18.61,18.61,0,1,0,38.8,20.42,18.61,18.61,0,0,0,20.19,1.81Zm6.15,20.78H22V34H16.75V22.59H12.44V18h4.31V16.34c0-6.22,2.6-9.49,8.1-9.49a9,9,0,0,1,3,.49V11.9a10.36,10.36,0,0,0-2.39-.28,3,3,0,0,0-2.59,1.07A5.69,5.69,0,0,0,22,16.4V18h6Z"
+                fill="currentColor"></path>
+            </svg>
+          </a>
+
+          <a href="https://www.messenger.com/t/613792429052288/" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="24" height="24">
+              <path
+                d="M12.54,3.33a20.11,20.11,0,0,1,14.87-.18A18.54,18.54,0,0,1,35.2,8.84a16.35,16.35,0,0,1,3.55,8.93,16,16,0,0,1-2.23,9.44,17.93,17.93,0,0,1-6,6.07,19.63,19.63,0,0,1-9.36,2.85,20.48,20.48,0,0,1-6.28-.7L7.49,39c.42-2.16.85-4.33,1.27-6.49a17.47,17.47,0,0,1-5.92-7.34,16,16,0,0,1-1.23-7.07A16.26,16.26,0,0,1,4.83,9.29,18.39,18.39,0,0,1,12.54,3.33ZM22.93,18.82,18.25,14,8.45,24.5l8.87-4.85c1.58,1.61,3.14,3.24,4.72,4.85q5-5.31,10.07-10.64Z"
+                fill="currentColor"></path>
+            </svg>
+          </a>
+
+          <a href="https://www.instagram.com/_myworldshop_/" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="24" height="24">
+              <path
+                d="M27.53,10.73H12.73A2.23,2.23,0,0,0,10.5,13v14.8A2.23,2.23,0,0,0,12.73,30h14.8a2.23,2.23,0,0,0,2.23-2.23V13A2.23,2.23,0,0,0,27.53,10.73Zm-3,13.86a6,6,0,1,1,1.75-4.23A6,6,0,0,1,24.52,24.59Zm2.85-10.08a1.37,1.37,0,1,1,1.37-1.37A1.37,1.37,0,0,1,27.37,14.51Z"
+                fill="currentColor"></path>
+              <path d="M20.28,16.14a4.22,4.22,0,1,0,4.23,4.22A4.23,4.23,0,0,0,20.28,16.14Z" fill="currentColor">
+              </path>
+              <path
+                d="M20.19,1.81A18.61,18.61,0,1,0,38.8,20.42,18.61,18.61,0,0,0,20.19,1.81Zm11.38,26a4,4,0,0,1-4,4H12.79a4,4,0,0,1-4-4V13a4,4,0,0,1,4-4H27.57a4,4,0,0,1,4,4Z"
+                fill="currentColor"></path>
+            </svg>
+          </a>
+
+          <a href="https://www.youtube.com/c/MYWORLDCLUB" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="24" height="24">
+              <polygon points="16.66 24.54 23.79 20.42 16.66 16.3 16.66 24.54" fill="currentColor"></polygon>
+              <path
+                d="M20.19,1.81A18.61,18.61,0,1,0,38.8,20.42,18.61,18.61,0,0,0,20.19,1.81ZM32.41,24.42a4.47,4.47,0,0,1-4.47,4.49H12.44a4.5,4.5,0,0,1-4.5-4.49v-8A4.48,4.48,0,0,1,12.44,12h15.5a4.44,4.44,0,0,1,4.47,4.45Z"
+                fill="currentColor"></path>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <section id="home" class="home">
+    <div class="home-logo-text">
+      <div class="home-toppic-contents">
+        <p id="toppic1">เปิดประสบการณ์ใหม่ให้สายสร้างสรรค์ </p>
+        <p id="toppic2">VIRTUAL STORE</p>
+        <p>#AIWAYS CONNECTED</p>
+      </div>
+    </div>
+    <div class="home-right-brand">
+      <p>#ALWAYSCONNECTED</p>
+    </div>
+    <div class="logo-text">
+      <div class="toppic-contents">
+        <h2>Welcome to</h2>
+        <h1>MY BAR STORY</h1>
+        <p>สานฝันกับการเป็น เจ้าของร้านอาหารได้พร้อมกันที่ MY BAR STORY ไปกับ MR.MY ได้
+          สนุกทุกสเต็ป เก็บ Coins ได้ทุกที่ <br/>แล้วไปแลกไอเท็มสุดคูลกัน
+        </p>
+        <!-- <a href=""> -->
+        <button onclick="OpenGame()">สร้างร้านเลย</button>
+        <!-- </a> -->
+      </div>
+      <img src="imagesnew/MRMYnew1.webp" id="banner-mrmy" alt="">
+      <img src="imagesnew/MRMYnew2.webp" id="bubble-mrmy" alt="">
+    </div>
+  </section>
+
+  <section class="slideBTN">
+    <div class="BranerSlide">
+      <button id="p1"></button>
+      <button id="p2"></button>
+      <button id="p3"></button>
+      <button id="p4"></button>
+      <button id="p5"></button>
+    </div>
+  </section>
+
+
+  <section id="game" class="game">
+    <button class="elliptical-button" onclick="scrollToNextSection()">
+      <div class="double-arrows">
+        <div class="arrow-down"></div>
+        <div class="arrow-down"></div>
+      </div>
+    </button>
+    <div class="flex-game">
+      <div class="toppic-contents-left">
+        <div id="img-contents">
+          <img src="imagesnew/logo-game.webp" id="logo-game" alt="">
+          <img src="imagesnew/Mascot.webp" id="mascot" alt="">
+        </div>
+        <p>ค้นหามายสไตล์ ไปกับ MR.MY ที่จะมาชวนจอยหาสไตล์ที่ใช่ กับเกมสุดชิค พร้อมลุ้นรับ COINS แบบไม่ต้องคอย
+          เพียงแค่มาจอยกับ MY BAR STORY แล้วนายรอไร กดเข้ามาจอยเลย!</p>
+        <!-- <a href=""> -->
+        <button onclick="OpenGame()">คลิกเพื่อเล่นเกมส์</button>
+        <!-- </a> -->
+      </div>
+      <div class="toppic-contents-right" id="toppic-contents-right">
+        <img src="imagesnew/Food Truck Bar.webp" alt="">
+        <img src="imagesnew/ริมเล bar.webp" alt="">
+        <img src="imagesnew/ตามสั่ง bar.webp" alt="">
+        <img src="imagesnew/ping yang bar.webp" alt="">
+        <img src="imagesnew/Blue bar.webp" alt="">
+        <img src="imagesnew/พริกสด Bar.webp" alt="">
+      </div>
+    </div>
+  </section>
+
+  <section id="myworld" class="contentsRe">
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <p>ลงทะเบียนครั้งแรก รับเลย 5000 COINS
+          <br>🎉เพียงแค่กรอกเบอร์โทร
+        </p>
+        <div class="content">
+          <input type="text" class="Customer_input" placeholder="กรอกเบอร์โทร" id="customer_id" style="display: none;">
+          <input type="text" class="telInput" maxlength="10" placeholder="กรอกเบอร์โทร" id="phoneNumber">
+          <input type="text" class="" maxlength="10" placeholder="กรอกเบอร์โทร" id="phoneNumberAuth"
+            style="display: none;">
+          <p id="errorText"></p>
+          <ul class="discription">
+            <li>ระบุเบอร์โทรของคุณเพื่อรับ COINS ทุกครั้งที่ซื้อสินค้าในเว็บ นอกจากนี้คุณยังสามารถนำ COINS ที่ได้
+              ไปแลกซื้อสินค้าในเว็บได้อีกด้วย</li>
+            <li>กรณีไม่ต้องการระบุตอนนี้ สามารถระบุภายหลังไดเมื่อมีการเข้าใช้งาน</li>
+          </ul>
+          <button id="register" alt="https://www.googletagmanager.com/ns.html?id=GTM-NLNQXC9" class="regisphone"
+            type="button" name="button">บันทึก</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="modal2" class="modal">
+      <div class="modal-content">
+        <p>ลงทะเบียนครั้งแรก รับเลย 5000 COINS
+          <br>🎉เพียงแค่กรอกเบอร์โทร
+        </p>
+        <div class="content">
+          <input type="text" class="Customer_input" placeholder="กรอกเบอร์โทร" id="customer_id" style="display: none;">
+          <input type="text" class="telInput" maxlength="10" placeholder="กรอกเบอร์โทร" id="phoneNumber">
+          <p id="errorText"></p>
+          <ul class="discription">
+            <li>ระบุเบอร์โทรของคุณเพื่อรับ COINS ทุกครั้งที่ซื้อสินค้าในเว็บ นอกจากนี้คุณยังสามารถนำ COINS ที่ได้
+              ไปแลกซื้อสินค้าในเว็บได้อีกด้วย</li>
+            <li>กรณีไม่ต้องการระบุตอนนี้ สามารถระบุภายหลังไดเมื่อมีการเข้าใช้งาน</li>
+          </ul>
+          <button id="register" alt="https://www.googletagmanager.com/ns.html?id=GTM-NLNQXC9" class="regisphone"
+            type="button" name="button">บันทึก</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="myworld">
+
+      <div class="logo-img" id="myworld-logo">
+        <img src="images/Text.webp" alt="https://www.googletagmanager.com/ns.html?id=GTM-NLNQXC9">
+      </div>  
+      <div class="EndStep" id="myworld1">
+        <p>รับทันที 5,000 COINS</p>
+      </div>
+
+      <!-- <button id="alertButton">Show Alert</button> -->
+
+      <div class="registor" id="myworld2">
+        <img src="images/redeemBTnn.webp" id="registorbtn" alt="">
+      </div>
+
+
+
+
+      <div id="slideStep" class="container-content">
+        <div class="viewStep">
+
+          <div class="Step">
+            <div class="title-img">
+              <img id="PCdisplay" src="images/titlestep1.webp" alt="">
+              <img src="images/1.webp" alt="">
+            </div>
+            <div class="content">
+              <img id="MBdisplay" src="images/titlestep1.webp" alt="">
+              <p>คลิก“รับ 5,000 COINS”</p>
+              <p>กดเลือกที่”รับ 5,000 COINS”<br>
+                <span>รอยืนยันตัวตนผ่าน LINE</span> <br>
+                <span> รอการตรวจสอบ 3-5 วินาที </span>
+              </p>
+            </div>
+          </div>
+
+          <div class="Step">
+            <div class="title-img">
+              <img id="PCdisplay" src="images/titlestep2.webp" alt="">
+              <img src="images/2.webp" alt="">
+            </div>
+            <div class="content">
+              <img id="MBdisplay" src="images/titlestep2.webp" alt="">
+              <p>กรอกเพื่อรับสิทธิ์</p>
+              <p> ร่วมท่าภารกิจ Check-in <br>
+                <span>ครบ 5 จุด รับ Coins เพิ่ม <br></span>
+                <span>แลก LIMITED ITEM</span>
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="rules" class="rules">
+    <div id="rulesTitle" class="pre-text">
+      <img src="images/coin2.webp" alt="">
+    </div>
+    <div class="container-content">
+
+      <div id="mobile" class="mobileReponses">
+        <img id="imgStep" src="images/Coincollect1.webp" alt="Coin Collect 1">
+
+        <div class="text-content">
+
+          <svg width="45" id="prevImg" height="45" viewBox="0 0 55 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M25.2083 34.375L18.3333 27.5M18.3333 27.5L25.2083 20.625M18.3333 27.5L36.6667 27.5M6.875 27.5C6.875 24.7915 7.40848 22.1095 8.44498 19.6071C9.48149 17.1048 11.0007 14.8311 12.9159 12.9159C14.8311 11.0007 17.1048 9.48148 19.6072 8.44498C22.1095 7.40848 24.7915 6.875 27.5 6.875C30.2085 6.875 32.8905 7.40848 35.3928 8.44498C37.8952 9.48148 40.1689 11.0007 42.0841 12.9159C43.9993 14.8311 45.5185 17.1048 46.555 19.6072C47.5915 22.1095 48.125 24.7915 48.125 27.5C48.125 32.9701 45.952 38.2161 42.0841 42.0841C38.2161 45.952 32.9701 48.125 27.5 48.125C22.0299 48.125 16.7839 45.952 12.9159 42.0841C9.04799 38.2161 6.875 32.9701 6.875 27.5Z"
+              stroke="#F7F7F8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+
+          <p id="text-contents">เลือกเมนู <br>“เช็ค COINS สะสม”</p>
+
+          <svg width="45" id="Next" height="45" viewBox="0 0 55 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M29.7917 34.375L36.6667 27.5M36.6667 27.5L29.7917 20.625M36.6667 27.5L18.3333 27.5M48.125 27.5C48.125 24.7915 47.5915 22.1095 46.555 19.6071C45.5185 17.1048 43.9993 14.8311 42.0841 12.9159C40.1689 11.0007 37.8952 9.48148 35.3928 8.44498C32.8905 7.40848 30.2085 6.875 27.5 6.875C24.7915 6.875 22.1095 7.40848 19.6072 8.44498C17.1048 9.48148 14.8311 11.0007 12.9159 12.9159C11.0007 14.8311 9.48149 17.1048 8.44498 19.6072C7.40848 22.1095 6.875 24.7915 6.875 27.5C6.875 32.9701 9.04798 38.2161 12.9159 42.0841C16.7839 45.952 22.0299 48.125 27.5 48.125C32.9701 48.125 38.2161 45.952 42.0841 42.0841C45.952 38.2161 48.125 32.9701 48.125 27.5Z"
+              stroke="#F7F7F8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+
+        </div>
+
+      </div>
+
+      <div class="slider redeemSlide" id="carousel">
+        <div class="slider-track">
+          <div class="cards">
+            <img src="images/Coincollect1.webp" alt="Coin Collect 1">
+            <div class="text-content">
+              <p>เลือกเมนู <br>“เช็ค COINS สะสม”</p>
+            </div>
+          </div>
+          <div class="cards">
+            <img src="images/Coincollect2.webp" alt="Coin Collect 2">
+            <div class="text-content">
+              <p>ตรวจสอบ COINS</p>
+            </div>
+          </div>
+          <div class="cards">
+            <img src="images/Coincollect3.webp" alt="Coin Collect 3">
+            <div class="text-content">
+              <p>เลือกสินค้าที่ต้องการ</p>
+            </div>
+          </div>
+          <div class="cards">
+            <img src="images/Coincollect4.webp" alt="Coin Collect 4">
+            <div class="text-content">
+              <p>กดแลกสินค้า</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footcontentBTN">
+      <button alt="https://www.googletagmanager.com/ns.html?id=GTM-NLNQXC9" class="btn" name="button">
+        <a href="https://myworld-virtual-store.com/point/">
+          <p>เช็คคะแนน/แลกรางวัล</p>
+        </a>
+        <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="22.5" cy="22.5" r="22.5" fill="#24B6E0" />
+          <path d="M32 23L18.5 30.7942L18.5 15.2058L32 23Z" fill="white" />
+        </svg>
+      </button>
+
+    </div>
+  </section>
+
+  <section id="myworld-vdo" class="myworld-vdo">
+    <div class="vdo-text">
+      <img src="images/VRtext.webp" alt="">
+      <div class="main-text">
+        <h2>Community แห่งใหม่ ของสายสร้างสรรค์<span>มาร่วมคอนเนคไอเดียไปด้วยกันพร้อมกิจกรรม</span>สนุกๆ
+          รับสิทธิพิเศษมากมาย
+        </h2>
+        <div class="btn-vr">
+          <a href="https://myworld-virtual-store.com">
+            <img src="images/btn.webp" alt="Description of the image">
+          </a>
+        </div>
+      </div>
+
+    </div>
+    <div class="vdo vdo-animate" id="page">
+      <video ref="video" controls="" jm_neat="935897089" autoplay muted jm_neat="935897089">
+        <source src="./vdo/All.mp4" type="video/mp4">
+      </video>
+    </div>
+
+  </section>
+
+
+
+  <section class="product" id="Items">
+    <div class="rules2">
+      <div class="product-img">
+        <a href="https://myworld-virtual-store.com" target="_blank">
+          <img src="images/presenter.webp" alt="https://www.googletagmanager.com/ns.html?id=GTM-NLNQXC9">
+        </a>
+      </div>
+      <div class="intro-text">
+        <div class="main-text">
+          <img src="images/Collection.webp" alt="">
+          <h2>วัยรุ่น MY เป็นได้ง่ายๆ แค่ช้อปสินค้า My World Collection สุดคูล มีสไตล์แบบไม่เหมือนใคร
+            ไอเทมใหม่ที่สายสร้างสรรค์ <br> และนักสะสมไม่ควรพลาด</h2>
+        </div>
+      </div>
+    </div>
+
+    <section class="all-product">
+      <div class="slider">
+        <button class="slide-btn left" id="slideLeft">
+          <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+            <path d="M32 15H3.41l8.29-8.29-1.41-1.42-10 10a1 1 0 0 0 0 1.41l10 10 1.41-1.41L3.41 17H32z"
+              data-name="4-Arrow Left" />
+          </svg>
+        </button>
+        <div class="slider-track2" id="slide2">
+
+          <div class="card">
+            <img src="Product/01.webp" alt="Product Image">
+            <div class="card-bottom">
+              <div class="col-l">
+                <div class="card-content">
+                  <h3>MY Cleanest Hands</h3>
+                  <p>39 THB</p>
+                </div>
+              </div>
+              <div class="col-r">
+                <a href="https://shop.line.me/@myworld/product/1004246876">
+                  <img src="images/cart-button.webp" alt="icon">
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="Product/02.webp" alt="Product Image">
+            <div class="card-bottom">
+              <div class="col-l">
+                <div class="card-content">
+                  <h3>MY Frosty Tumbler</h3>
+                  <p>390 THB</p>
+                </div>
+              </div>
+              <div class="col-r">
+                <a href="https://shop.line.me/@myworld/product/1003928433">
+                  <img src="images/cart-button.webp" alt="icon">
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="Product/03.webp" alt="Product Image">
+            <div class="card-bottom">
+              <div class="col-l">
+                <div class="card-content">
+                  <h3>MY MONOGRAM T-SHIRT</h3>
+                  <p>390 THB</p>
+                </div>
+              </div>
+              <div class="col-r">
+                <a href="https://shop.line.me/@myworld/product/1005903878">
+                  <img src="images/cart-button.webp" alt="icon">
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="Product/04.webp" alt="https://www.googletagmanager.com/ns.html?id=GTM-NLNQXC9">
+            <div class="card-bottom">
+              <div class="col-l">
+                <div class="card-content">
+                  <h3>MY BONNIE HOODIE</h3>
+                  <p>1,290 THB</p>
+                </div>
+              </div>
+              <div class="col-r">
+                <a href="https://shop.line.me/@myworld/product/1005903869">
+                  <img src="images/cart-button.webp" alt="icon">
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="Product/05.webp" alt="https://www.googletagmanager.com/ns.html?id=GTM-NLNQXC9">
+            <div class="card-bottom">
+              <div class="col-l">
+                <div class="card-content">
+                  <h3>MY BONNIE HOODIE light blue</h3>
+                  <p>1,290 THB</p>
+                </div>
+              </div>
+              <div class="col-r">
+                <a href="https://shop.line.me/@myworld/product/1005903774">
+                  <img src="images/cart-button.webp" alt="icon">
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="Product/06.webp" alt="https://www.googletagmanager.com/ns.html?id=GTM-NLNQXC9">
+            <div class="card-bottom">
+              <div class="col-l">
+                <div class="card-content">
+                  <h3>MY CASETY I-PHONE 15 PRO #01</h3>
+                  <p>790 THB</p>
+                </div>
+              </div>
+              <div class="col-r">
+                <a href="https://shop.line.me/@myworld/product/1005903821">
+                  <img src="images/cart-button.webp" alt="icon">
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="Product/07.webp" alt="https://www.googletagmanager.com/ns.html?id=GTM-NLNQXC9">
+            <div class="card-bottom">
+              <div class="col-l">
+                <div class="card-content">
+                  <h3>MY CASETY I-PHONE 15 PRO #02</h3>
+                  <p>790 THB</p>
+                </div>
+              </div>
+              <div class="col-r">
+                <a href="https://shop.line.me/@myworld/product/1005903838">
+                  <img src="images/cart-button.webp" alt="icon">
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="Product/08.webp" alt="https://www.googletagmanager.com/ns.html?id=GTM-NLNQXC9">
+            <div class="card-bottom">
+              <div class="col-l">
+                <div class="card-content">
+                  <h3>MY CASETY I-PAD (Pro 11) INCH #01</h3>
+                  <p>1,290 THB</p>
+                </div>
+              </div>
+              <div class="col-r">
+                <a href="https://shop.line.me/@myworld/product/1005658349">
+                  <img src="images/cart-button.webp" alt="icon">
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="Product/09.webp" alt="https://www.googletagmanager.com/ns.html?id=GTM-NLNQXC9">
+            <div class="card-bottom">
+              <div class="col-l">
+                <div class="card-content">
+                  <h3>MY CASETY I-PAD (Pro 11) INCH #02</h3>
+                  <p>1,290 THB</p>
+                </div>
+              </div>
+              <div class="col-r">
+                <a href="https://shop.line.me/@myworld/product/1005658359">
+                  <img src="images/cart-button.webp" alt="icon">
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="Product/10.webp" alt="https://www.googletagmanager.com/ns.html?id=GTM-NLNQXC9">
+            <div class="card-bottom">
+              <div class="col-l">
+                <div class="card-content">
+                  <h3>Collab (XL) แก้วเก็บความเย็น</h3>
+                  <p>490 THB</p>
+                </div>
+              </div>
+              <div class="col-r">
+                <a href="https://shop.line.me/@myworld/product/1005903656">
+                  <img src="images/cart-button.webp" alt="icon">
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="Product/11.webp" alt="https://www.googletagmanager.com/ns.html?id=GTM-NLNQXC9">
+            <div class="card-bottom">
+              <div class="col-l">
+                <div class="card-content">
+                  <h3>Collab</h3>
+                  <p>390 THB</p>
+                </div>
+              </div>
+              <div class="col-r">
+                <a href="https://shop.line.me/@myworld/product/1005760730">
+                  <img src="images/cart-button.webp" alt="icon">
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="Product/12.webp" alt="https://www.googletagmanager.com/ns.html?id=GTM-NLNQXC9">
+            <div class="card-bottom">
+              <div class="col-l">
+                <div class="card-content">
+                  <h3>MY FABULOUS TOWEL</h3>
+                  <p>490 THB</p>
+                </div>
+              </div>
+              <div class="col-r">
+                <a href="https://shop.line.me/@myworld/product/1005658409">
+                  <img src="images/cart-button.webp" alt="icon">
+                </a>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="card">
+            <img src="Product/13.webp" alt="https://www.googletagmanager.com/ns.html?id=GTM-NLNQXC9">
+            <div class="card-bottom">
+              <div class="col-l">
+                <div class="card-content">
+                  <h3>MY COOLER COOLER</h3>
+                  <p>490 THB</p>
+                </div>
+              </div>
+              <div class="col-r">
+                <a href="https://shop.line.me/@myworld/product/1005658368">
+                  <img src="images/cart-button.webp" alt="icon">
+                </a>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="card">
+            <img src="Product/14.webp" alt="https://www.googletagmanager.com/ns.html?id=GTM-NLNQXC9">
+            <div class="card-content">
+              <div class="card-bottom">
+                <div class="col-l">
+                  <div class="card-content">
+                    <h3>MY KIND OF SOUP_T-SHIRT</h3>
+                    <p>790 THB</p>
+                  </div>
+                </div>
+                <div class="col-r">
+                  <a href="https://shop.line.me/@myworld/product/1006348926">
+                    <img src="images/cart-button.webp" alt="icon">
+                  </a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <!-- Right button -->
+          <button class="slide-btn right" id="slideRight"><svg class="icon" xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 25 25">
+              <path d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z"
+                data-name="Right" />
+            </svg>
+          </button>
+
+
+        </div>
+        <!-- <div class="BranerSlideShop">
+          <button id="s1"></button>
+          <button id="s2"></button>
+          <button id="s3"></button>
+          <button id="s4"></button>
+        </div> -->
+
+        <div class="pd-btn">
+          <!-- id="LineShop" -->
+          <button alt="https://www.googletagmanager.com/ns.html?id=GTM-NLNQXC9" class="btn2" type="button"
+            name="button">
+            <a href="https://shop.line.me/@myworld">ดูสินค้าทันที</a>
+          </button>
+        </div>
+    </section>
+
+    <div class="footer">
+      <h1 style="font-size: 16px;">2024 MY WORLD #ALWAYS CONNECTED</h1>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+      integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous">
+      </script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+
+
+    <script src="js/nav.js"></script>
+    <script src="js/modal.js"></script>
+    <!-- <script src="js/ProductSlide.js"></script> -->
+    <script src="js/Slide2.js"></script>
+    <script src="js/imageSelect.js"></script>
+    <script src="js/connectApi.js"></script>
+    <script src="js/popup.js"></script>
+    <script src="js/Game.js"></script>
+
+    <script>
+      document.getElementById('slideLeft').addEventListener('click', function () {
+        document.getElementById('slide2').scrollBy({
+          left: -300,
+          behavior: 'smooth'
+        });
+      });
+
+      document.getElementById('slideRight').addEventListener('click', function () {
+        document.getElementById('slide2').scrollBy({
+          left: 300,
+          behavior: 'smooth'
+        });
+      });
+    </script>
+    <script>
+      document.querySelector('.navbar-toggler').addEventListener('click', function () {
+        document.getElementById('navbar').classList.toggle('active');
+      });
+
+      window.addEventListener('scroll', function () {
+        if (window.scrollY > 50) {
+          document.getElementById('navbar').classList.add('active');
+        } else {
+          document.getElementById('navbar').classList.remove('active');
+        }
+      });
+    </script>
+</body>
+
+</html>

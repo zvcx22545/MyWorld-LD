@@ -1,0 +1,18 @@
+.custom-swal-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.swal2-popup {
+  max-width: 100%;
+  width: auto;
+  margin: 0 auto;
+}
+
+.custom-text-content {
+  font-size: 18px;
+}
